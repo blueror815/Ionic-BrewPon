@@ -1,0 +1,14 @@
+<ion-view class="find-beer-view" hide-nav-bar="true" title="COMMENT" can-swipe-back="false">
+    <div class="bar bar-header main-navbar">
+        <button class="button pull-left back-btn" ng-click="goBack()"><i style="margin-left: 1px; color: white; font-size: 12px !important;" class="fa fa-arrow-left fa-1x fa-fw"></i> Back</button>
+        <h5 style="color: white" class="title">COMMENT US</h5>
+        <button class="button pull-right refresh-btn" ng-click="goHome()">Home<i style="margin-left: 1px; color: white; font-size: 14px !important;" class="fa fa-home fa-1x fa-fw"></i></button>
+    </div>
+    <ion-content padding="true" ng-class="search" class="has-header">
+        <div class="comment-container" style="padding-top: 10px;">
+            <p class="contact-intro">Whether reporting beer information, announcing community events, or needing to go on a drunken rant...</p>
+            <textarea class="comment-box" rows="10" ng-model="comment"></textarea>
+            <button class="comment-btn button button-positive" ng-click="save(comment)">tell us</button>
+        </div>
+    </ion-content>
+</ion-view>

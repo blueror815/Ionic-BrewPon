@@ -1,0 +1,17 @@
+<ion-view class="news-list-view" hide-nav-bar="true" title="NEWS" can-swipe-back="false">
+    <div class="bar bar-header main-navbar">
+        <button class="button pull-left back-btn" ng-click="goBack()"><i style="margin-left: 1px; color: white; font-size: 12px !important;" class="fa fa-arrow-left fa-1x fa-fw"></i> Back</button>
+        <h5 style="color: white" class="title">ASHEVILLE BLOG</h5>
+        <button class="button pull-right refresh-btn" ng-click="goHome()">Home<i style="margin-left: 1px; color: white; font-size: 14px !important;" class="fa fa-home fa-1x fa-fw"></i></button>
+    </div>
+    <ion-content padding="false" class="has-header">
+        <div class="list blog-list" ng-if="blogs && blogs.length > 0">
+            <a class="blog-item item" ng-click="showBlogItem($index)" ng-repeat="blog in blogs">
+                <img class="blog-image" ng-src="{{ blog.image }}" style="display: block; width:100%;" />
+                <h3 style="font-weight: bold;">{{ blog.title }}</h3>
+                <p ng-bind-html="blog.body" style="font-size: 0.8em;">
+                </p>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

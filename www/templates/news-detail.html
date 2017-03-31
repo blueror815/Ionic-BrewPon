@@ -1,0 +1,30 @@
+<ion-view class="blog-view" hide-nav-bar="true" title="NEWS" can-swipe-back="false">
+    <div class="bar bar-header main-navbar">
+        <button class="button pull-left back-btn" ng-click="goBack()"><i style="margin-left: 1px; color: white; font-size: 12px !important;" class="fa fa-arrow-left fa-1x fa-fw"></i> Back</button>
+        <h5 style="color: white" class="title">ASHEVILLE BLOG</h5>
+        <button class="button pull-right refresh-btn" ng-click="goHome()">Home<i style="margin-left: 1px; color: white; font-size: 14px !important;" class="fa fa-home fa-1x fa-fw"></i></button>
+    </div>
+    <ion-content padding="false" class="has-header" scroll="true">
+        <div class="blog-container" ng-show="blog_item != undefined">
+            <div class="blog-detail-picture-container">
+                <img class="blog-detail-picture" ng-src="{{ blog_item.image }}" />
+            </div>
+            <div class="blog-detail-content-container">
+                <div class="middle-row">
+                    <span class="blog-detail-title">{{blog_item.title}}</span>
+                </div>
+                <div class="middle-row">
+                    <p ng-bind-html="blog_item.body"></p>
+                </div>
+
+                <div class="middle-row" style="border-top: 1px solid #ddd; padding-top: 15px;">
+                    <p>
+                        <a ng-click="showNewsItemOnBlog()">
+                            View on Asheville Blog
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

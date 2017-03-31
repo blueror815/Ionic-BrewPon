@@ -1,0 +1,26 @@
+<ion-view class="brewery-list-view" hide-nav-bar="true" title="NEAR ME NOW" can-swipe-back="false">
+    <div class="bar bar-header main-navbar">
+        <button class="button pull-left back-btn" ng-click="goBack()"><i style="margin-left: 1px; color: white; font-size: 12px !important;" class="fa fa-arrow-left fa-1x fa-fw"></i> Back</button>
+        <h5 style="color: white" class="title">PUBS AND GRUB</h5>
+        <button class="button pull-right refresh-btn" ng-click="refreshData()">Refresh<i style="margin-left: 1px; color: white; font-size: 12px !important;" class="fa fa-refresh fa-1x fa-fw" ng-class="refresh"></i></button>
+    </div>
+
+    <ion-content padding="false" class="has-header" scroll="true" overflow-scroll="true">
+        <ion-list class="listings">
+            <a class="item item-thumbnail-left item-icon-left item-icon-right nearme-list-item" href="#/near-mes/{{brewery.id}}" ng-repeat="brewery in breweries | orderBy: order">
+                <img ng-src="{{brewery.featured_image}}" />
+                <h2dark>
+                    <span class="brewery-desc brewery-title">{{brewery.post_title}}</span><br>
+                    <div class="distance">
+                        <p class="brewery-desc brewery-distance"><i class="icon ion-location distance-icon"></i> {{calcDistance(brewery.geolat, brewery.geolong)}} miles away</p>
+                    </div>
+
+                    <p class="brewery-desc brewery-msg" ng-bind-html="getHoursMessage(brewery, false).storeHours.message"></p>
+                    <p class="brewery-desc kitchen-message" ng-if="hasKitchen(brewery) && getHoursMessage(brewery, false).storeHours.closedStatus != 'closed'">{{ getHoursMessage(brewery, false).kitchenHours.message }}</p>
+                    <!--<p class="brewery-desc" ng-if="hasKitchen(brewery)">{{ getHoursMessage(brewery, false).kitchenHours.message }}</p>-->
+                    <i class="arrow-icon icon ion-ios-arrow-right icon-accessory"></i>
+                </h2dark>
+            </a>
+        </ion-list>
+    </ion-content>
+</ion-view>

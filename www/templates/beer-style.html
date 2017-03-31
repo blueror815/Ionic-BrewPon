@@ -1,0 +1,60 @@
+<ion-view class="beer-view" hide-nav-bar="true" title="BEER" can-swipe-back="false">
+    <div class="bar bar-header main-navbar">
+        <button class="button pull-left back-btn" ng-click="goBack()"><i style="margin-left: 1px; color: white; font-size: 12px !important;" class="fa fa-arrow-left fa-1x fa-fw"></i> Back</button>
+        <h5 style="color: white" class="title">BEER</h5>
+        <button class="button pull-right refresh-btn" ng-click="goHome()">Home<i style="margin-left: 1px; color: white; font-size: 14px !important;" class="fa fa-home fa-1x fa-fw"></i></button>
+    </div>
+    <ion-content padding="true" class="has-header">
+        <div ng-if="style !== null && style !== undefined" class="normal-container">
+            <h3 class="name">{{ style.name }}</h3>
+            <p class="description">{{ style.description }}</p>
+            <table class="table table-striped" style="width: 100%; border: 1px solid #DDD;">
+                <thead>
+                    <tr style="text-align: center">
+                        <th></th>
+                        <th style="font-weight: bolder">Minimum</th>
+                        <th style="font-weight: bolder">Maximum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="style-table-odd">
+                        <td class="style-table-title">Alcohol By Volume</td>
+                        <td class="style-table-content">{{ style.abvmin || 'n/a' }}%</td>
+                        <td class="style-table-content">{{ style.abvmax || 'n/a' }}%</td>
+                    </tr>
+                    <tr class="style-table-even">
+                        <td class="style-table-title">International Bitterness Units</td>
+                        <td class="style-table-content">{{ style.ibumin || 'n/a' }}</td>
+                        <td class="style-table-content">{{ style.ibumax || 'n/a' }}</td>
+                    </tr>
+                    <tr class="style-table-odd">
+                        <td class="style-table-title">Original Gravity</td>
+                        <td class="style-table-content">{{ style.ogmin || 'n/a' }}</td>
+                        <td class="style-table-content">{{ style.ogmax || 'n/a' }}</td>
+                    </tr>
+                    <tr class="style-table-even">
+                        <td class="style-table-title">Final Gravity</td>
+                        <td class="style-table-content">{{ style.fgmin || 'n/a' }}</td>
+                        <td class="style-table-content">{{ style.fgmax || 'n/a' }}</td>
+                    </tr>
+                    <tr class="style-table-odd">
+                        <td class="style-table-title">Standard Reference Method</td>
+                        <td class="style-table-content">{{ style.srmmin || 'n/a' }}</td>
+                        <td class="style-table-content">{{ style.srmmax || 'n/a' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="on-tap-row" ng-show="beers && beers.length > 0">
+                <h4 class="beers-list-header">Beers</h4>
+
+                <a class="item  item-icon-right" ng-if="beer.name!=''" ng-repeat="beer in beers" ng-click="showBeer( beer.ID )" style="border-left: 0px !important; border-right: 0px !important;">
+                    <p ng-bind-html="beer.name | highlight:searchTerm" class="beer-list-name"></p>
+                    <p ng-bind-html="beer.brewery[0].post_title | highlight:searchTerm" class="beer-list-brewery"></p>
+                    <i class="icon ion-chevron-right" style="font-size: 20px; right: 5px !important"></i>
+                </a>
+
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

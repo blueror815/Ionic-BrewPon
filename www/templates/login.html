@@ -1,0 +1,21 @@
+<ion-view hide-nav-bar="true" can-swipe-back="false">
+    <div class="bar bar-header main-navbar">
+        <button class="button pull-left back-btn" ng-click="goBack()"><i style="margin-left: 1px; color: white; font-size: 12px !important;" class="fa fa-arrow-left fa-1x fa-fw"></i> Back</button>
+        <h5 style="color: white" class="title">Login</h5>
+        <button class="button pull-right refresh-btn" ng-click="goHome()">Home<i style="margin-left: 1px; color: white; font-size: 14px !important;" class="fa fa-home fa-1x fa-fw"></i></button>
+    </div>
+    <ion-content class="login-view has-header" scroll="true" padding="true">
+        <p class="prc-login-message">Anonymously track your favorite beers on tap</p>
+        <div class="login-header-image">
+            <img src="img/headers/iphone-comp.png" />
+        </div>
+        <!-- <div class="col-xs-12 login-divider"></div> -->
+        <div ng-repeat="msg in messages">
+            {{ msg.message }}
+        </div>
+
+    </ion-content>
+    <div class="footer row login-form">
+        <button class="button button-positive button-block" ng-click="loginWithFacebook()"><i class="fa fa-facebook"></i> Sign in With Facebook</button>
+    </div>
+</ion-view>

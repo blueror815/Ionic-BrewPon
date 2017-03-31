@@ -1,0 +1,35 @@
+<ion-view class="find-beer-view" hide-nav-bar="true" title="FIND BEER" can-swipe-back="false">
+    <div class="bar bar-header main-navbar">
+        <button class="button pull-left back-btn" ng-click="goBack()"><i style="margin-left: 1px; color: white; font-size: 12px !important;" class="fa fa-arrow-left fa-1x fa-fw"></i> Back</button>
+        <h5 style="color: white" class="title">FIND BEER</h5>
+        <button class="button pull-right refresh-btn" ng-click="goHome()">Home<i style="margin-left: 1px; color: white; font-size: 14px !important;" class="fa fa-home fa-1x fa-fw"></i></button>
+    </div>
+    <ion-content padding="false" ng-class="search" class="has-header">
+        <div class="search-input-container">
+            <input type="text" class="find-beer-input form-control form-control-small" placeholder="Search for your favorite beers!" ng-model="searchTerm" ng-change="updateBeerSearchTerm(searchTerm)" />
+        </div>
+
+        <div class="search-explanation-container" ng-if="beers.length == 0">
+            <img src="img/headers/search-icon-text.png" />
+        </div>
+
+        <div class="glass-pour" ng-if="beers.length == 0">
+            <img src="img/icons/glass_pour.svg" />
+        </div>
+
+        <div class="list beer-list" ng-show="beers && beers.length > 0">
+            <a class="item item-thumbnail-left item-icon-right" ng-if="beer.name!=''" ng-repeat="beer in beers" ng-click="showBeer( beer.ID )">
+                <!--<div ng-if="favorite_mode && (beer.brewery[0].featured_image != null || beer.brewery[0].logo != null || beer.featured_image != null)">-->
+                <img ng-if="beer.brewery[0].featured_image" class="beer-row-image" ng-src="{{beer.brewery[0].featured_image | trustUrl }}" />
+                <img ng-if="!beer.brewery[0].featured_image && beer.brewery[0].logo != null" class="beer-row-image" ng-src="{{beer.brewery[0].logo | trustUrl }}" />
+                <img ng-if="!beer.brewery[0].featured_image && beer.brewery[0].logo == null && beer.display_image" class="beer-row-image" src="{{ beer.display_image }}">
+                <!--</div>-->
+                <p ng-bind-html="beer.name | highlight:searchTerm" class="beer-list-name"></p>
+                <p ng-bind-html="beer.brewery[0].post_title | highlight:searchTerm" class="beer-list-brewery"></p>
+                <i class="icon ion-chevron-right" style="font-size: 20px; right: 5px !important"></i>
+            </a>
+        </div>
+
+        <a ui-sref="comment" class="style-link" style="display: block; text-align: center; bottom: 0; left: 0; right: 0;">Can't find a beer? Let us know here.</a>
+    </ion-content>
+</ion-view>

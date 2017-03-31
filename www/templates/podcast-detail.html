@@ -1,0 +1,44 @@
+<ion-view class="blog-view" hide-nav-bar="true" title="PODCAST" can-swipe-back="false">
+    <div class="bar bar-header main-navbar">
+        <button class="button pull-left back-btn" ng-click="goBack()"><i style="margin-left: 1px; color: white; font-size: 12px !important;" class="fa fa-arrow-left fa-1x fa-fw"></i> Back</button>
+        <h5 style="color: white" class="title">PODCAST</h5>
+        <button class="button pull-right refresh-btn" ng-click="goHome()">Home<i style="margin-left: 1px; color: white; font-size: 14px !important;" class="fa fa-home fa-1x fa-fw"></i></button>
+    </div>
+    <ion-content padding="false" class="has-header" scroll="true">
+        <div class="blog-container" ng-show="podcast != undefined">
+            <div class="podcast-detail-picture-container">
+                <img class="podcast-picture" ng-src="{{ podcast.image_url | trustUrl }}" />
+            </div>
+            <div class="blog-detail-content-container">
+                <h6 style="font-weight: light;">{{ podcast.date | date:'mediumDate' }}</h6>
+                <p ng-bind-html="podcast.description"></p>
+
+                <a class="pull-right" href="javascript: void(0)" ng-click="show_podcast_item(podcast.url)">
+                    Download
+                </a>
+                <audio data-tap-disabled="true" controls>
+                    <source ng-src="{{ podcast.url | trustUrl }}" type="audio/mpeg">
+                </audio>
+                <!--<ion-audio-track track="track" ng-show="podcast.url != undefined">
+
+                    <div class="item audio-container">
+                        <ion-audio-controls>
+                            <button class="icon-left" ion-audio-play style="margin-left: -10px; border: 0px; background-color: #DDD; height: 35px"></button><i class="icon ion-monitor laptop"></i>
+                            <ion-audio-progress-bar track="track" display-time></ion-audio-progress-bar>
+                        </ion-audio-controls>
+                    </div>
+
+                </ion-audio-track>-->
+            </div>
+
+            <div class="list podcast-client-list">
+                <a class="item podcast-client-item item-thumbnail-left item-icon-right" ng-repeat="podcast_client in podcast_clients" ng-click="goBreweryDetail(podcast_client.ID)">
+                    <img ng-show="{{ podcast_client.featured_image != false }}" class="podcast-client-img" ng-src="{{ podcast_client.featured_image }}">
+                    <img ng-show="{{ podcast_client.featured_image == false && podcast_client.listing_logo != null }}" class="podcast-client-img" ng-src="{{ podcast_client.listing_logo }}">
+                    <h2 style="white-space: normal !important; line-height: 25px; font-weight: bold;">{{ podcast_client.post_title }}</h2>
+                    <i class="icon ion-chevron-right" style="font-size: 20px; right: 5px !important"></i>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

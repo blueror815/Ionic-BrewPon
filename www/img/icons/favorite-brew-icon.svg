@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>favorite</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="favorite" sketch:type="MSArtboardGroup">
+            <circle id="Oval-3" fill="#913D88" sketch:type="MSShapeGroup" cx="128" cy="128" r="128"></circle>
+            <g id="add182" sketch:type="MSLayerGroup" transform="translate(48.000000, 45.000000)" fill="#FFFFFF">
+                <g id="add-circle" sketch:type="MSShapeGroup">
+                    <path d="M160,96 L96,96 L96,160 L64,160 L64,96 L0,96 L0,64 L64,64 L64,0 L96,0 L96,64 L160,64 L160,96 L160,96 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

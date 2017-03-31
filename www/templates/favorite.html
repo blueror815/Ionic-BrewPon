@@ -1,0 +1,28 @@
+<ion-view class="find-beer-view" hide-nav-bar="true" title="FAVORITE" can-swipe-back="false">
+    <div class="bar bar-header main-navbar">
+        <button class="button pull-left back-btn" ng-click="goBack()"><i style="margin-left: 1px; color: white; font-size: 12px !important;" class="fa fa-arrow-left fa-1x fa-fw"></i> Back</button>
+        <h5 style="color: white" class="title">MY BEERS</h5>
+        <button class="button pull-right refresh-btn" ng-click="goHome()">Home<i style="margin-left: 1px; color: white; font-size: 14px !important;" class="fa fa-home fa-1x fa-fw"></i></button>
+    </div>
+    <ion-content padding="false" class="has-header">
+        <div class="list beer-list" ng-show="beers && beers.length > 0">
+            <a class="item item-thumbnail-left item-icon-right" ng-if="beer.name!=''" ng-repeat="beer in beers" ng-click="showBeer( beer.ID )">
+                <!--<div ng-if="favorite_mode && (beer.brewery[0].featured_image != null || beer.brewery[0].logo != null || beer.featured_image != null)">-->
+                <img ng-if="beer.brewery[0].featured_image" class="beer-row-image" ng-src="{{beer.brewery[0].featured_image | trustUrl }}" />
+                <img ng-if="!beer.brewery[0].featured_image && beer.brewery[0].logo != null" class="beer-row-image" ng-src="{{beer.brewery[0].logo | trustUrl }}" />
+                <img ng-if="!beer.brewery[0].featured_image && beer.brewery[0].logo == null && beer.display_image" class="beer-row-image" src="{{ beer.display_image }}">
+                <!--</div>-->
+                <p ng-bind-html="beer.name" class="favorite-beer-name"></p>
+                <p ng-bind-html="beer.brewery[0].post_title" class="favorite-beer-brewery-name"></p>
+                <p class="favorite-beer-description">{{beer.description}}</p>
+                <i class="icon ion-chevron-right" style="font-size: 20px; right: 5px !important"></i>
+            </a>
+        </div>
+
+        <div ng-show="!beers && beers.length == 0">
+            <p class="prc-message">
+                You have not added any beers to your list. Find a beer, then click the "Add" icon.
+            </p>
+        </div>
+    </ion-content>
+</ion-view>

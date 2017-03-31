@@ -1,0 +1,41 @@
+<ion-view class="event-detail-view" hide-nav-bar="true" title="EVENT" can-swipe-back="false">
+    <div class="bar bar-header main-navbar">
+        <button class="button pull-left back-btn" ng-click="goBack()"><i style="margin-left: 1px; color: white; font-size: 12px !important;" class="fa fa-arrow-left fa-1x fa-fw"></i> Back</button>
+        <h5 style="color: white" class="title">EVENT</h5>
+        <button class="button pull-right refresh-btn" ng-click="goHome()">Home<i style="margin-left: 1px; color: white; font-size: 14px !important;" class="fa fa-home fa-1x fa-fw"></i></button>
+    </div>
+    <ion-content padding="false" scroll="true" class="has-header">
+        <div class="community-event-container" ng-show="community_event">
+            <div class="community-event-detail-picture-container">
+                <img class="community-event-detail-picture" ng-src="{{ community_event.featured_image }}" />
+            </div>
+            <div class="event-detail-content-container">
+                <div class="middle-row">
+                    <span class="event-detail-title">{{community_event.name}}</span>
+
+                    <h6 class="community-event-detail-place">{{ community_event.place.name }}</h6>
+                    <h6 class="community-event-detail-date">
+                        {{ community_event.EventStartDate | date:'fullDate' }} - {{ community_event.EventStartDate + "T" + community_event.EventStartTime | date:'shortTime' }}
+                    </h6>
+                </div>
+                <div class="middle-row" ng-if="community_event.EventURL">
+                    <!--<button class="ticket-btn" ng-click="openTicketLink('{{community_event.EventURL}}')">
+                        Tickets
+                    </button>-->
+                </div>
+                <div class="middle-row">
+                    <p ng-bind-html="community_event.description"></p>
+                </div>
+
+                <div class="middle-row" style="border-top: 1px solid #ddd; padding-top: 15px;">
+                    <p>
+                        To add your community beer event,
+                        <a ui-sref="comment" class="community-event-link">
+                            let us know here
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

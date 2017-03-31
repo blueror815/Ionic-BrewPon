@@ -1,0 +1,948 @@
+/* Empty. Add your own CSS if you like */
+
+body {
+    color: black;
+    -webkit-touch-callout: none;
+    /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;
+    /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;
+    /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color: #E4E4E4;
+    background-image: linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image: -webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image: -ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, #A7A7A7), color-stop(0.51, #E4E4E4));
+    background-attachment: fixed;
+    font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.bar h5.title {
+    line-height: 53px !important;
+    font-size: 17px;
+    text-shadow: 0 0 3px black;
+}
+
+.fade-in-out.ng-enter,
+.fade-in-out .ng-enter {
+    -webkit-animation: fadeIn 0.3s;
+    -moz-animation: fadeIn 0.3s;
+    animation: fadeIn 0.3s;
+    position: absolute;
+}
+
+.fade-in-out.ng-leave,
+.fade-in-out .ng-leave {
+    -webkit-animation: fadeOut 0.3s;
+    -moz-animation: fadeOut 0.3s;
+    animation: fadeOut 0.3s;
+    position: absolute;
+}
+
+
+/*.home-city {
+    line-height: 42px;
+    color: white;
+    text-shadow: 0 0 3px black;
+    font-size: 25px;
+    margin-left: 10px;
+}*/
+
+.home-city {
+    line-height: 45px;
+    color: white;
+    text-shadow: 0 0 3px black;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.icon.ion-chevron-right {
+    color: black !important;
+}
+
+ion-content.loading-view {
+    background: url('../img/splash/bpn-splash-2.png');
+    background-position: center top;
+    background-size: 100% 100%;
+}
+
+ion-content.info-view {
+    font-family: 'Burtinomatic';
+    background-image: url('../img/texture/old_paper_texture.jpg');
+    background-repeat: none;
+    background-size: cover;
+    font-size: 1.6em !important;
+}
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Burtinomatic';
+    src: url('../fonts/Burtinomatic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.home-view {
+    background-color: lightgray;
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+}
+
+div.main-navbar {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: url(../img/headers/header.png) no-repeat;
+    background-position: center top;
+    background-size: 100% 100%;
+    height: 50px;
+}
+
+button.button.home-btn {
+    background-color: #301300;
+    border: 1px solid #301300;
+    border-radius: 4px;
+    bottom: 10px !important;
+    color: beige;
+    font-family: Verdana;
+    font-size: 10px;
+    opacity: 0.8;
+    top: 10px !important;
+    line-height: 25px !important;
+}
+
+.nearme-list-item {
+    padding-right: 50px !important;
+}
+
+.svg-loader {
+    color: white;
+    height: 11px;
+    /*padding: 0 0 0 5px;*/
+    vertical-align: text-top;
+}
+
+img.home-menu-icon-left {
+    width: 25px;
+    vertical-align: middle;
+}
+
+a.item i.home-menu-icon-right {
+    font-size: 15px;
+}
+
+span.menu-title {
+    margin-left: 10px;
+}
+
+div.list.menu-list-group {
+    margin-bottom: 0px !important;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 1px 1px 1px #e5e5e5;
+}
+
+div.divider {
+    height: 8px;
+    background-color: #EEEEEE;
+}
+
+span.span-i-calendar {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #EB971C;
+    padding-right: 5px;
+    padding-left: 5px;
+    color: white;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+span.span-i-eye {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #7D8300;
+    padding-right: 3px;
+    padding-left: 3px;
+    color: white;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+span.span-i-eye i {
+    font-size: 20px !important;
+}
+
+span.span-i-horn {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #EA8500;
+    padding-right: 3px;
+    padding-left: 3px;
+    color: white;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+span.span-i-horn i {
+    font-size: 19px !important;
+}
+
+span.span-i-search {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #7F0200;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: white;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+span.span-i-search i {
+    font-size: 19px !important;
+}
+
+span.span-i-plus {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #994696;
+    padding: 5px 5px 1px;
+    color: white;
+}
+
+span.span-i-plus i {
+    font-size: 20px !important;
+}
+
+button.button.refresh-btn {
+    background-color: #301300;
+    border: 1px solid #301300;
+    border-radius: 4px;
+    bottom: 10px !important;
+    color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0.8;
+    top: 10px !important;
+    line-height: 25px !important;
+}
+
+button.button.back-btn {
+    /*background-color: #301300;
+    border: 1px solid #301300;
+    border-radius: 4px;
+    bottom: 8px !important;
+    color: beige;
+    font-family: Verdana;
+    opacity: 0.8;
+    top: 5px !important;
+    display: block;
+    line-height: 30px;
+    height: 20px;*/
+    background-color: #301300;
+    border: 1px solid #301300;
+    border-radius: 4px;
+    bottom: 10px !important;
+    color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0.8;
+    top: 5px !important;
+    line-height: 31px !important;
+    height: 20px;
+}
+
+ion-view.brewery-detail-view .item {
+    /*border-bottom: 0px !important;*/
+    border-left: 0px !important;
+    border-right: 0px !important;
+}
+
+button.btn.go-button.activated {
+    background-color: #DDD;
+}
+
+.brewery-middle .item {
+    border-bottom: 0px;
+}
+
+.brewery-on-tap>.item {
+    border-bottom: 0px;
+}
+
+ion-view.brewery-detail-view .list {
+    margin-bottom: 0px !important;
+}
+
+span.brewery-title {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.brewery-desc {
+    margin-left: 10px;
+}
+
+.brewery-distance {
+    padding-left: 15px !important;
+}
+
+.item p.brewery-msg {
+    color: red !important;
+    font-weight: bold;
+}
+
+div.distance>p>i.distance-icon {
+    font-size: 22px !important;
+    height: 50px !important;
+    left: 105px !important;
+    top: 12px;
+}
+
+i.arrow-icon {
+    color: black !important;
+}
+
+.hour-msg {
+    color: red;
+    font-size: 14px;
+    font-weight: 550;
+}
+
+.brewery-detail-desc {
+    padding-left: 10px;
+    margin: 0px !important;
+    padding-right: 10px;
+}
+
+.brewery-contact-info {
+    color: black;
+    margin: 0px !important;
+    font-size: 14px;
+}
+
+.distance-text {
+    font-size: 12px;
+}
+
+button.go-button {
+    background-color: seashell;
+    border: 1px solid #ddd;
+    font-weight: bold;
+    width: 105px;
+}
+
+div.brewery-detail {
+    margin-bottom: 0px !important;
+}
+
+img.brewery-fulllogo {
+    max-width: 100%;
+    height: auto;
+}
+
+div.featured-item-container {
+    vertical-align: middle;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+div.brewery-on-tap>item {
+    padding: 10px !important;
+}
+
+span.tab-header,
+span.podcast-header {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+div.beer-row {
+    border-bottom: 1px solid #ddd;
+}
+
+li.find-beer-row {
+    border-top: 0px;
+    padding-top: 5px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.beer-list-name {
+    font-size: 14px;
+    color: black;
+    font-weight: bolder;
+}
+
+.beer-list-brewery,
+.beer-list-abv,
+.beer-list-style {
+    font-size: 12px !important;
+}
+
+.style-link {
+    /*text-overflow: ellipsis;*/
+    height: 17px!important;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 12px!important;
+    display: block;
+    font-size: 13px;
+}
+
+.brewery-podcast-header,
+.brewery-community-header {
+    margin-left: 16px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+div.brewery-brewery-podcast a img {
+    left: 16px !important;
+}
+
+a.brewery-podcast-item>span.brewery-podcast-post-title,
+a.brewery-event-item>span.community-event-name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+a.brewery-podcast-item>span.brewery-podcast-post-title,
+a.brewery-podcast-item>p {
+    overflow: hidden;
+    text-overflow: initial;
+    white-space: normal;
+    color: black;
+}
+
+a.brewery-podcast-item,
+a.brewery-event-item {
+    padding-right: 35px !important;
+    padding-left: 85px !important;
+}
+
+span.brewery-podcast-header:first-of-type+a,
+span.brewery-community-header:first-of-type+a,
+.beers-list-header:first-of-type+a {
+    border-top: 0px !important;
+}
+
+.beers-list-header:first-of-type+a {
+    padding-top: 0px !important;
+}
+
+a.brewery-podcast-item img,
+a.brewery-event-item img,
+a.podcast-item img {
+    position: absolute;
+    top: 10px;
+    left: 18px !important;
+    max-width: 55px !important;
+    max-height: 85px;
+    width: 100%;
+    height: 100%;
+}
+
+a.community-event-item img {
+    position: absolute;
+    top: 10px;
+    left: 15px !important;
+    /*max-width: 55px !important;*/
+    max-height: 85px;
+    width: 100%;
+    height: 100%;
+}
+
+i.brewery-detail-arrow-right {
+    right: -10px !important;
+    font-size: 20px !important;
+}
+
+.community-event-picture-container {
+    overflow: hidden;
+    width: 100%;
+    height: 70px;
+}
+
+.community-event-picture {
+    width: auto;
+    height: 70px;
+}
+
+.community-event-detail-picture-container,
+.blog-detail-picture-container,
+.podcast-detail-picture-container {
+    overflow: hidden;
+    max-height: 200px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: -10px;
+}
+
+.community-event-detail-picture,
+.blog-detail-picture {
+    width: 100%;
+}
+
+.community-event-info-container {
+    padding-left: 0;
+}
+
+
+/*.community-event-date-overlay {
+    text-align: center;
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+    top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}*/
+
+.item p {
+    color: #646464 !important;
+}
+
+a.community-event-item {
+    padding-left: 110px !important;
+    color: black;
+}
+
+a.community-event-item>p {
+    white-space: normal !important;
+    font-size: 14px !important;
+}
+
+a.community-event-item>span.community-event-name {
+    font-weight: bold !important;
+    white-space: normal;
+    font-size: 15px !important;
+}
+
+a.community-event-item .community-event-date-overlay {
+    text-align: center;
+    position: absolute;
+    left: 37px;
+    /*right: 0;*/
+    bottom: 0;
+    top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+div.community-event-container,
+div.blog-container,
+div.podcast-container {
+    padding-top: 7px;
+}
+
+div.community-event {
+    padding-top: 8px;
+}
+
+button.ticket-btn {
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    bottom: 10px !important;
+    color: white;
+    height: 30px !important;
+    width: 100%;
+    font-family: Verdana;
+    opacity: 0.8;
+    top: 10px !important;
+}
+
+div.event-detail-content-container,
+div.blog-detail-content-container,
+div.podcast-detail-content-container {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+div.middle-row {
+    padding-top: 10px;
+}
+
+span.event-detail-title,
+span.blog-detail-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.blog-item h3 {
+    margin-top: 5px;
+    white-space: normal !important;
+}
+
+.blog-item p {
+    color: #DDD;
+    white-space: normal !important;
+}
+
+.brewpon-header-community-events {
+    background: #663300;
+    color: #fae3be;
+    padding: 15px 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    display: block;
+    margin: 0 auto;
+}
+
+.brewpon-header-community-events-container {
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+}
+
+.podcast-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444 !important;
+    white-space: normal !important;
+}
+
+.podcast-short-description {
+    font-size: 0.8em;
+    color: #444 !important;
+    white-space: normal !important;
+}
+
+a.podcast-item {
+    padding-left: 90px !important;
+    padding-right: 50px !important;
+}
+
+audio {
+    width: 100%;
+}
+
+a.podcast-client-item {
+    padding-top: 20px !important;
+    padding-left: 120px !important;
+    min-height: 100px;
+}
+
+
+/* NEW FIND BEER */
+
+.search-input-container {
+    background: #ce7623;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ce7623 0%, #804127 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ce7623 0%, #804127 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ce7623 0%, #804127 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ce7623', endColorstr='#804127', GradientType=0);
+    /* IE6-9 */
+    padding: 10px;
+}
+
+.search-input-container input {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid brown;
+    border-radius: 3px;
+}
+
+.search {
+    /*background-image: url(../img/icons/glass_pour.png), url(../img/texture/b9abfe9c.png);*/
+    background-image: url('../img/texture/b9abfe9c.png');
+    background-repeat: repeat;
+    background-position: center center, center center;
+    background-size: 100% 100%;
+    z-index: -1000;
+}
+
+.search-explanation-container img {
+    width: 85%;
+    margin: 10px auto;
+    display: block;
+}
+
+.glass-pour {
+    text-align: center;
+}
+
+.glass-pour img {
+    width: 60px;
+    position: static;
+    margin-top: 20%;
+}
+
+.highlighted {
+    color: black;
+    font-weight: bold;
+}
+
+.beer-img-container {
+    text-align: center;
+    padding-top: 4px;
+    /*background-color: lawngreen;*/
+}
+
+.beer-img-container img {
+    width: 100%;
+    height: 150px;
+}
+
+.follow-beer-container {
+    text-align: center;
+}
+
+.login-view p.prc-login-message {
+    font-size: 18px;
+    line-height: 20px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: bold;
+    margin-top: 40px;
+}
+
+.login-header-image {
+    text-align: center;
+    /*overflow: hidden;
+    position: absolute;
+    top: 0px;
+    bottom: 0px*/
+}
+
+.login-header-image img {
+    width: 100%;
+    display: block;
+}
+
+.login-form {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    margin-top: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 1px -2px 4px rgba(0, 0, 0, .2);
+    /*height: 60px;*/
+}
+
+.glass-pour-icon {
+    position: absolute;
+    left: 20px !important;
+    max-width: 80px;
+    max-height: 80px;
+    width: 25px !important;
+    height: 100%;
+    top: 0px !important;
+}
+
+span.special-title {
+    color: #E2C79F;
+    text-decoration: 1px solid blue !important;
+    font-weight: bold;
+    font-size: 15px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 25px !important;
+    margin-top: 14px !important;
+}
+
+.special-item,
+.special-item.activated {
+    border-top: 3px solid #331A00;
+    background-color: #663300;
+    padding-left: 42px;
+    padding-top: 10px;
+    min-height: 43px;
+}
+
+.brewery-special,
+.brewery-special.activated {
+    background-color: #663300;
+    padding-left: 45px !important;
+    min-height: 80px !important;
+    display: flex !important;
+    align-items: center;
+}
+
+.brewery-special p {
+    color: #E2C79F !important;
+    font-weight: bold;
+    text-overflow: none;
+    white-space: normal !important;
+}
+
+.brewery-special img {
+    width: 35px !important;
+    top: 0px !important;
+}
+
+.prc-message {
+    padding: 1em;
+    font-size: 16px;
+}
+
+.style-table-content {
+    text-align: center;
+}
+
+.style-table-odd {
+    background-color: #DDD;
+    border: 1px solid #DDD;
+}
+
+.style-table-odd td {
+    padding: 5px;
+}
+
+.style-table-even td {
+    padding: 5px;
+}
+
+.beer-brewery,
+.beer-style,
+.abv {
+    line-height: 25px;
+    font-size: 13px;
+}
+
+.onTapBreweries {
+    font-size: 13px;
+}
+
+.glass-pour-icon-nearme {
+    position: absolute;
+    right: 30px !important;
+    max-width: 80px;
+    max-height: 80px;
+    width: 25px !important;
+    height: 100%;
+    top: 0px !important;
+}
+
+.favorite-beer-name {
+    font-size: 16px !important;
+    color: black !important;
+    font-family: bold !important;
+}
+
+.favorite-beer-brewery-name {
+    font-size: 13px;
+}
+
+p.favorite-beer-description {
+    white-space: normal !important;
+    font-size: 13px;
+}
+
+.contact-intro {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.comment-box {
+    width: 100%;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.comment-btn {
+    margin-top: 15px;
+    min-height: 30px !important;
+    max-height: 30px !important;
+    line-height: 0px !important;
+    font-size: 15px !important;
+}
+
+.podcast-date-overlay {
+    text-align: center;
+    position: absolute;
+    left: 30px;
+    /* right: 0; */
+    bottom: 0;
+    top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.card.audio-card {
+    margin-top: 40px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    height: 63px !important;
+}
+
+div.range input[type="range"] {
+    width: 100% !important;
+    position: relative !important;
+    margin-top: -78px !important;
+    margin-left: 45px !important;
+}
+
+ion-audio-progress {
+    position: absolute !important;
+    margin-top: -70px !important;
+    font-size: 12px !important;
+    right: 20px !important;
+}
+
+.audio-container {
+    height: 35px !important;
+}
+
+.audio-container.item {
+    padding-right: 0px !important;
+    padding-left: 10px !important;
+    margin-top: 30px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    background-color: #ddd !important;
+}
+
+.laptop {
+    position: absolute;
+    right: 12px;
+    font-size: 20px;
+    margin-top: 8px;
+}

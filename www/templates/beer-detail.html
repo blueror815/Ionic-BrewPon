@@ -1,0 +1,67 @@
+<ion-view class="beer-view" hide-nav-bar="true" title="BEER" can-swipe-back="false">
+    <div class="bar bar-header main-navbar">
+        <button class="button pull-left back-btn" ng-click="goBack()"><i style="margin-left: 1px; color: white; font-size: 12px !important;" class="fa fa-arrow-left fa-1x fa-fw"></i> Back</button>
+        <h5 style="color: white" class="title">BEER</h5>
+        <button class="button pull-right refresh-btn" ng-click="goHome()">Home<i style="margin-left: 1px; color: white; font-size: 14px !important;" class="fa fa-home fa-1x fa-fw"></i></button>
+    </div>
+    <ion-content padding="false" ng-class="search" class="has-header">
+        <ul class="list beer-detail-container">
+            <h4 style="text-align: center">{{ beer.name }}</h4>
+            <li class="item item-thumbnail-right">
+                <img ng-if="beer.brewery[0].featured_image != undefined" class="beer-row-image" ng-src="{{beer.brewery[0].featured_image}}" />
+                <img ng-if="beer.brewery[0].featured_image == false && beer.brewery[0].logo != null" class="beer-row-image" ng-src="{{beer.brewery[0].logo | trustUrl }}" />
+                <img ng-if="beer.brewery[0].featured_image == false && beer.brewery[0].logo == null && beer.display_image" class="beer-row-image" ng-src="{{ beer.display_image }}">
+
+                <p class="beer-brewery">
+                    <b>Brewery :</b>
+                    <span class="beer-brewery">
+                        {{ beer.brewery[0].post_title }}
+                    </span>
+                </p>
+
+                <p ng-click="goBeerStyle(beer.style[0].ID)" ng-if="beer.style !== undefined" class="beer-style">
+                    <b>Style :</b>
+                    <a class="beer-brewery" style="color: blue; text-decoration: underline">
+                        {{ beer.style[0].post_title }}
+                    </a>
+                </p>
+
+                <p class="abv">
+                    <b>ABV:</b>
+                    <span>{{ beer.abv }}%</span>
+                </p>
+
+                <div class="follow-beer-container row" ng-if="favorites.indexOf(beer.ID) !== -1">
+                    <div class="col col-25">
+                        <img class="favorite-icon" style="width: 60px" src="img/icons/favorite-color.png" ng-click="doLike('remove',beer.ID)" />
+                    </div>
+                    <div class="col col-60 col-center">
+                        <span class="col col-65" style="font-size: 13px; text-align: left"> Tap thumbs up to un-follow this beer</span>
+                    </div>
+                </div>
+                <div class="follow-beer-container row" ng-if="favorites.indexOf(beer.ID) === -1">
+                    <div class="col col-25">
+                        <img class="favorite-icon" style="width: 60px" src="img/icons/favorite-nocolor_newer.png" ng-click="doLike('add',beer.ID)" />
+                    </div>
+                    <div class="col col-60 col-center">
+                        <span class="col col-65" style="font-size: 13px; text-align: left"> Follow this Beer </span>
+                    </div>
+                </div>
+            </li>
+            <li class="on-tap item" ng-show="onTapBreweries.length > 0">
+                <b style="font-size: 14px">Where On Tap</b>
+                <div class="onTapBreweries" ng-repeat="brewery in onTapBreweries" ng-click="goBrewery(brewery.ID)">
+                    <span style="color: blue; text-decoration: underline">{{ brewery.post_title }}</span>
+                </div>
+            </li>
+            <li class="item">
+                <b style="font-size: 14px">About this beer</b>
+                <div class="beer-description-container" ng-if="beer.description">
+                    <p style="white-space: normal; font-size: 14px">
+                        {{ beer.description }}
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>
