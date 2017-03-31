@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.brew.ionic" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>BrewPon</name>
+  <description>
+        An Ionic Framework and Cordova project.
+    </description>
+  <author email="you@example.com" href="http://example.com/">
+      Kevin Mun
+    </author>
+  <content src="index.html"/>
+  <access origin="*"/>
+  <access launch-external="yes" origin="tel:*"/>
+  <access launch-external="yes" origin="mailto:*"/>
+  <allow-navigation href="*"/>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="SplashScreenDelay" value="6000"/>
+  <preference name="FadeSplashScreenDuration" value="3000"/>
+  <preference name="android-minSdkVersion" value="16"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="loadUrlTimeoutValue" value="70000"/>
+  <preference name="CrosswalkAnimatable" value="true" />
+  <feature name="StatusBar">
+    <param name="ios-package" onload="true" value="CDVStatusBar"/>
+  </feature>
+  <platform name="ios">
+    <splash height="960" src="resources/ios/splash/bpn-splash-phone4.png" width="640"/>
+    <splash height="480" src="resources/ios/splash/bpn-splash-phone3.png" width="320"/>
+    <splash height="1136" src="resources/ios/splash/bpn-splash-phone5.png" width="640"/>
+    <splash height="1334" src="resources/ios/splash/bpn-splash-phone6.png" width="750"/>
+    <splash height="2208" src="resources/ios/splash/bpn-splash-736h.png" width="1242"/>
+    <splash height="1242" src="resources/ios/splash/bpn-splash-736l.png" width="2208"/>
+    <splash height="1536" src="resources/ios/splash/ipadl2.png" width="2048"/>
+    <splash height="2048" src="resources/ios/splash/ipadl3.png" width="2732"/>
+    <splash height="768" src="resources/ios/splash/ipadl1.png" width="1024"/>
+    <splash height="2048" src="resources/ios/splash/ipadp2.png" width="1536"/>
+    <splash height="2732" src="resources/ios/splash/ipadp3.png" width="2048"/>
+    <splash height="1024" src="resources/ios/splash/ipadp1.png" width="768"/>
+    <icon src="resources/ios/icon/icon.png" width="57" height="57"/>
+    <icon src="resources/ios/icon/icon@2x.png" width="114" height="114"/>
+    <icon src="resources/ios/icon/icon-40.png" width="40" height="40"/>
+    <icon src="resources/ios/icon/icon-40@2x.png" width="80" height="80"/>
+    <icon src="resources/ios/icon/icon-40@3x.png" width="120" height="120"/>
+    <icon src="resources/ios/icon/icon-50.png" width="50" height="50"/>
+    <icon src="resources/ios/icon/icon-50@2x.png" width="100" height="100"/>
+    <icon src="resources/ios/icon/icon-60.png" width="60" height="60"/>
+    <icon src="resources/ios/icon/icon-60@2x.png" width="120" height="120"/>
+    <icon src="resources/ios/icon/icon-60@3x.png" width="180" height="180"/>
+    <icon src="resources/ios/icon/icon-72.png" width="72" height="72"/>
+    <icon src="resources/ios/icon/icon-72@2x.png" width="144" height="144"/>
+    <icon src="resources/ios/icon/icon-76.png" width="76" height="76"/>
+    <icon src="resources/ios/icon/icon-76@2x.png" width="152" height="152"/>
+    <icon src="resources/ios/icon/icon-83.5@2x.png" width="167" height="167"/>
+    <icon src="resources/ios/icon/icon-small.png" width="29" height="29"/>
+    <icon src="resources/ios/icon/icon-small@2x.png" width="58" height="58"/>
+    <icon src="resources/ios/icon/icon-small@3x.png" width="87" height="87"/>
+  </platform>
+  <platform name="android">
+    <splash density="land-ldpi" src="resources/android/splash/d-land-ldpi-screen.png"/>
+    <splash density="land-mdpi" src="resources/android/splash/d-land-mdpi-screen.png"/>
+    <splash density="land-hdpi" src="resources/android/splash/d-land-hdpi-screen.png"/>
+    <splash density="land-xhdpi" src="resources/android/splash/d-land-xhdpi-screen.png"/>
+    <splash density="land-xxhdpi" src="resources/android/splash/d-land-xxhdpi-screen.png"/>
+    <splash density="land-xxxhdpi" src="resources/android/splash/d-land-xxxhdpi-screen.png"/>
+    <splash density="port-ldpi" src="resources/android/splash/d-port-ldpi-screen.png"/>
+    <splash density="port-mdpi" src="resources/android/splash/d-port-mdpi-screen.png"/>
+    <splash density="port-hdpi" src="resources/android/splash/d-port-hdpi-screen.png"/>
+    <splash density="port-xhdpi" src="resources/android/splash/d-port-xhdpi-screen.png"/>
+    <splash density="port-xxhdpi" src="resources/android/splash/d-port-xxhdpi-screen.png"/>
+    <splash density="port-xxxhdpi" src="resources/android/splash/d-port-xxxhdpi-screen.png"/>
+    <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
+    <icon src="resources/android/icon/drawable-mdpi-icon.png" density="mdpi"/>
+    <icon src="resources/android/icon/drawable-hdpi-icon.png" density="hdpi"/>
+    <icon src="resources/android/icon/drawable-xhdpi-icon.png" density="xhdpi"/>
+    <icon src="resources/android/icon/drawable-xxhdpi-icon.png" density="xxhdpi"/>
+    <icon src="resources/android/icon/drawable-xxxhdpi-icon.png" density="xxxhdpi"/>
+  </platform>
+  <plugin name="cordova-plugin-facebook4" spec="~1.7.4">
+    <variable name="APP_ID" value="1497878587175571"/>
+    <variable name="APP_NAME" value="Community is Brewing"/>
+  </plugin>
+  <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
+</widget>
